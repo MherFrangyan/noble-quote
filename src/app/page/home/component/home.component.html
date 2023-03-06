@@ -1,0 +1,294 @@
+<app-nav></app-nav>
+<div class="home">
+  <header class="home__header">
+    <div class="home__container">
+      <div class="home__header_content">
+        <div
+          routerLink="/"
+          class="home__logo">
+          <img src="assets/images/logo.png" alt="Logo">
+        </div>
+        <div class="home__right">
+          <div class="home__search">
+            <input class="home__search_input"
+                   placeholder="Search"
+                   [(ngModel)]="search"
+                   type="text">
+            <img src="assets/images/icon/search_icon.svg" alt="Icon">
+          </div>
+          <span class="home__right-user">
+            <img src="assets/images/icon/user_circle.svg" alt="User">
+          </span>
+        </div>
+      </div>
+      <section class="home__main">
+        <div class="home__main_left">
+          <h5 class="home__main_left-title">We Provide</h5>
+          <h1 class="home__main_left-desc">
+            Superior Protection for your Vehicle
+          </h1>
+          <span class="home__main_left-sub">
+            Most repairs for your car or truck will occur after your factory warranty has expired.
+          </span>
+          <button class="btn-main home__main_left-btn">Get The Coverage</button>
+        </div>
+        <div class="home__main_right">
+          <form [formGroup]="aboutForm" (ngSubmit)="submit()">
+            <div class="home__main_right-type">
+              <div class="home__main_right-title_block">
+                <h2 class="title">About Your Vehicle</h2>
+                <span class="title-line"></span>
+              </div>
+
+              <div class="home__main_right-select">
+                <div class="select-lain">
+                  <div class="lain-items">
+                    <app-select
+                      [options]="optionsList"
+                      [myControl]="select1"
+                      [label]="'Year of Vehicle'"
+                    ></app-select>
+                    <app-select
+                      [options]="optionsList"
+                      [myControl]="select2"
+                      [label]="'Model'"
+                    ></app-select>
+                  </div>
+
+                </div>
+                <div class="select-lain">
+                  <div class="lain-items">
+                    <app-select
+                      [options]="optionsList"
+                      [myControl]="select3"
+                      [label]="'Make of Vehicle'"
+                    ></app-select>
+                    <app-select
+                      [options]="optionsList"
+                      [myControl]="select4"
+                      [label]="'Mileage'"
+                    ></app-select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="home__main_right-type about_block">
+              <div class="home__main_right-title_block">
+                <h2 class="title">About You</h2>
+                <span class="title-line"></span>
+              </div>
+
+              <div class="home__main_right-select">
+                <div class="select-lain">
+                  <div class="lain-items">
+                    <div class="home__main_input">
+                      <label class="home__main_input-label">First Name</label>
+                      <input
+                        formControlName="firstName"
+                        placeholder="Jhon"
+                        class="home__main_input-area"
+                        type="text">
+                    </div>
+                    <div class="home__main_input">
+                      <label class="home__main_input-label">Email Address</label>
+                      <input
+                        formControlName="email"
+                        placeholder="jhonsmith@gmail.com"
+                        class="home__main_input-area"
+                        type="text">
+                    </div>
+                  </div>
+
+                </div>
+                <div class="select-lain">
+                  <div class="lain-items">
+                    <div class="home__main_input">
+                      <label class="home__main_input-label">Last Name</label>
+                      <input
+                        placeholder="Smith"
+                        formControlName="lastName"
+                        class="home__main_input-area"
+                        type="text">
+                    </div>
+                    <div class="home__main_input">
+                      <label class="home__main_input-label">Phone Numner</label>
+                      <input
+                        placeholder="12345678"
+                        formControlName="phoneNumber"
+                        class="home__main_input-area"
+                        type="phone">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="home__main_right-footer">
+              <p class="footer_text">By submitting this form, I agree to NobleQuote contacting me
+                by phone, text or email to present available coverage options for my vehicle.</p>
+              <button
+                [disabled]="aboutForm.invalid"
+                type="submit"
+                class="btn-main footer_btn">Submit
+              </button>
+            </div>
+
+          </form>
+
+        </div>
+      </section>
+
+    </div>
+  </header>
+  <div class="home__container">
+    <article class="home__article">
+      <h2 class="home__article-title">Average Repair Costs in 2023</h2>
+      <div class="home__article-card">
+        <app-costs-card
+          [cardData]="costsCard"
+        ></app-costs-card>
+      </div>
+    </article>
+  </div>
+  <section class="home__section">
+    <div class="home__container">
+      <div class="home__section_content">
+        <h4 class="home__section_content-title">Don’t let a breakdown put the brakes on your day!</h4>
+        <p class="home__section_content-sub_title">Without coverage you risk</p>
+        <div class="home__section_content-points">
+          <div class="home__section_content-points_item">
+            <img class="points_icon" src="assets/images/stress.svg" alt="icon">
+            <span class="points_name">Having unwanted stress</span>
+          </div>
+          <div class="home__section_content-points_item">
+            <img class="points_icon" src="assets/images/money-bag-2.svg" alt="icon">
+            <span class="points_name">Having unexpected costs</span>
+          </div>
+          <div class="home__section_content-points_item">
+            <img class="points_icon" src="assets/images/steering-wheel.svg" alt="icon">
+            <span class="points_name">Being unable to drive</span>
+          </div>
+          <div class="home__section_content-points_item">
+            <img class="points_icon" src="assets/images/briefcase-4.svg" alt="icon">
+            <span class="points_name">Being unable to work</span>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="home__section-image">
+        <img alt="Banner" src="assets/images/banner_section.webp">
+      </div>
+    </section>
+  <div class="home__container">
+    <aside class="home__aside">
+      <h2 class="home__aside-title">Our Vehicle Service Contracts include</h2>
+      <div class="home__aside_content">
+        <div
+          *ngFor="let item of contractList"
+          class="home__aside_content-item">
+          <span class="home__aside_content-image">
+            <img class="hover_img" src="assets/images/icon/{{item.hove_img}}" alt="icon">
+            <img class="img" src="assets/images/icon/{{item.img}}" alt="icon">
+          </span>
+          <h6 class="home__aside_content-title">{{item.title}}</h6>
+          <p class="home__aside_content-desc">{{item.desc}}</p>
+          <span class="right-icon">
+            <img alt="Icon" src="assets/images/icon/arrow_right.svg">
+          </span>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="home__organization">
+    <div class="home__organization-container">
+      <div class="home__organization-header">
+        <div class="text-block">
+          <h6 class="title">NobleCare</h6>
+          <p class="desc">Each week we highlight
+            3 charitable groups and provide them support so they can continue to help those in need.</p>
+        </div>
+        <div class="header-image">
+          <img src="assets/images/organization/woman-with-huge-debt%201.png" alt="">
+        </div>
+      </div>
+      <div class="home__organization-footer">
+        <h5 class="title">Amazing Organizations We Believe In</h5>
+        <div class="home__organization-slide">
+          <div class="home__organization-bg_fone">
+            <img alt="Bg" src="assets/images/shadow.png">
+          </div>
+          <ngx-slick-carousel class="home__organization-carousel"
+                              #slickModal="slick-carousel"
+                              [config]="carouselOptions">
+            <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+              <img src="assets/images/organization/{{ slide.img }}" alt="Logo" width="100%">
+            </div>
+          </ngx-slick-carousel>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="home__quote">
+    <div class="home__quote-container">
+      <h4 class="home__quote-title">Get a Quote. Get Covered. Give Back</h4>
+      <p class="home__quote-desc">Amet minim mollit non deserunt ullamco est.</p>
+      <button class="btn-main home__quote-btn">Get The Coverage</button>
+    </div>
+  </div>
+
+  <footer
+    class="home__footer"
+  >
+    <img
+      class="home__footer-img"
+      src="assets/images/icon/noble.png" alt="Logo">
+    <ul class="home__footer-list">
+      <li>
+        <a class="home__footer-item" href="javascript:void(0)">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+      </li>
+      <li>
+        <a class="home__footer-item" href="javascript:void(0)">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="home__footer-item" href="javascript:void(0)">
+          <i class="fa-brands fa-google-plus-g"></i>
+        </a>
+      </li>
+      <li>
+        <a class="home__footer-item" href="javascript:void(0)">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </li>
+    </ul>
+    <span class="home__footer-line"></span>
+    <div class="home__footer-contact">
+      <ul class="list">
+        <li class="list-item">
+          <p>Customer Service</p>
+          <a href="javascript:void(0)">(800) 644-4194</a>
+        </li>
+        <li class="list-item">
+          <p>Claims</p>
+          <a href="javascript:void(0)">(800) 644-4194</a>
+        </li>
+        <li class="list-item">
+          <p>Sales</p>
+          <a href="javascript:void(0)">(800) 644-4194</a>
+        </li>
+      </ul>
+      <div class="home__footer-police">
+        <h5 class="home__footer-text">© 2023 NQ</h5>
+        <div class="home__footer-terms">
+          <h5 class="home__footer-text">Terms and conditions • Privacy policy</h5>
+          <h5 class="home__footer-text">®All Rights Reserved. NobleQuote.</h5>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>

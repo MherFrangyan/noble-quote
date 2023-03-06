@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&family=Mrs+Saint+Delafield&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+.btn-main{
+  cursor: pointer;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFFFFF;
+  background: linear-gradient(94.32deg, #0B4E8C -132.22%, #83ACD8 142.15%);
+  border-radius: 18.1034px;
+  border: none;
+  padding: 22px 40px;
+  display: block;
+  &:disabled{
+   opacity: .5;
+  }
+  @media (max-width: 480px) {
+    padding: 15px 34px;
+  }
+}
+
+html, body {
+  height: 100%;
+  background: #F5F5F5;
+}

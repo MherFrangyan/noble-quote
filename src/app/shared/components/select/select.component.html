@@ -1,0 +1,22 @@
+<!--<div class="select">-->
+<!--  <label class="select__label"> {{label}}</label>-->
+<!--  <mat-form-field>-->
+<!--    <mat-label>Select an option</mat-label>-->
+<!--    <mat-select [formControl]="myControl">-->
+<!--      <mat-option [value]="item.value" *ngFor="let item of options">{{item.title}}</mat-option>-->
+<!--    </mat-select>-->
+<!--  </mat-form-field>-->
+<!--</div>-->
+<div class="custom-select-container" [ngClass]="{'open': isOpen}" (click)="toggle()">
+  <div class="selected-option">
+    <p *ngIf="myControl.value" >{{ myControl.value }}</p>
+    <p class="select-placeholder" *ngIf="!myControl.value">Select an option</p>
+  </div>
+  <div class="toggle-icon">
+    <i class="fas" [ngClass]="{'fa-chevron-up': isOpen, 'fa-chevron-down': !isOpen}"></i>
+  </div>
+  <div class="options-list">
+    <div *ngFor="let option of options" class="option" (click)="selectOption(option.value); $event.stopPropagation()">{{ option.title }}</div>
+  </div>
+</div>
+

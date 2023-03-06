@@ -1,0 +1,21 @@
+<nav class="nav">
+  <div class="nav__container">
+    <div class="nav__content">
+      <ul class="nav__list">
+        <li class="nav__item"
+            [class.nav__item-first]="first"
+            *ngFor="let item of navItem; let first = first">
+          <a class="nav__item-link" href="javascript:void(0)">
+            {{item.name}}
+          </a>
+        </li>
+      </ul>
+      <div class="nav__contact">
+        <span class="nav__contact-title">Call today to get started</span>
+        <a class="nav__contact-phone" href="tel:(800) 474-1308">(800) 474-1308</a>
+      </div>
+
+    </div>
+
+  </div>
+</nav>
