@@ -1,0 +1,18 @@
+<aside class="home__aside">
+    <h2 class="home__aside-title">Our Vehicle Service Contracts include</h2>
+    <div class="home__aside_content">
+        <div
+                *ngFor="let item of contractList"
+                class="home__aside_content-item pointer-event position-relative">
+          <span class="home__aside_content-image d-flex justify-content-center align-items-center">
+            <img class="hover_img" src="assets/images/icon/{{item.hove_img}}" alt="icon">
+            <img class="img" src="assets/images/icon/{{item.img}}" alt="icon">
+          </span>
+            <h6 class="home__aside_content-title">{{item.title}}</h6>
+            <p class="home__aside_content-desc">{{item.desc}}</p>
+            <span class="right-icon">
+            <img alt="Icon" src="assets/images/icon/arrow_right.svg">
+          </span>
+        </div>
+    </div>
+</aside>

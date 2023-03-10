@@ -14,6 +14,8 @@ export class NavComponent implements OnInit {
 
   public navItem: NavItems[] = [];
 
+  public search: string = '';
+
   constructor() {
   }
 
@@ -25,4 +27,7 @@ export class NavComponent implements OnInit {
     ]
   }
 
+  searchValue(val: string) {
+    this.search = val;
+  }
 }

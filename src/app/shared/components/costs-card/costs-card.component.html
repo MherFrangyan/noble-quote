@@ -1,24 +1,32 @@
-<div class="card-content">
-  <div class="card" *ngFor="let item of cardData">
-    <div class="card__main">
-      <img
-        class="card__main-icon"
-        src="../../../../assets/images/icon/{{item.title}}.svg"
-        alt="Icon">
-      <h2 class="card__main-title">{{item.title}}</h2>
-      <div class="card__main-price">
-        <span class="price_title">without coverage</span>
-        <h4 class="price_count">{{item.price | currency:'CAD':'symbol-narrow':'3.0'}}+</h4>
-      </div>
+<div class="card-content_main row">
+    <div class="col-lg-5 d-lg-block d-none px-0">
+        <img class="block_image" src="assets/images/costs_banner.webp" alt="Banner">
     </div>
-    <div class="card__sale">
-      <span class="card__sale-with">with</span>
-      <img
-        class="card__sale-logo"
-        src="assets/images/logo.png"
-        alt="Logo">
-      <span class="card__sale-count">$ 0*</span>
+    <div class="col-lg-7 col-md-12 px-lg-0 px-2">
+        <div class="card-content d-flex justify-content-between align-items-center flex-wrap">
+            <div class="card position-relative border-0" *ngFor="let item of cardData">
+                <div class="card__main h-100">
+                    <img
+                            class="card__main-icon position-absolute"
+                            src="../../../../assets/images/icon/{{item.title}}.svg"
+                            alt="Icon">
+                    <h2 class="card__main-title text-capitalize">{{item.title}}</h2>
+                    <div class="card__main-price">
+                        <span class="price_title d-inline-block">without coverage</span>
+                        <h4 class="price_count">{{item.price | currency:'CAD':'symbol-narrow':'3.0'}}+</h4>
+                    </div>
+                    <div class="card__sale d-flex flex-column align-items-center position-absolute">
+                        <span class="card__sale-with">with</span>
+                        <img
+                                class="card__sale-logo"
+                                src="../../../../assets/images/logo_sale.svg"
+                                alt="Logo">
+                        <span class="card__sale-count">$ 0*</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
+
 

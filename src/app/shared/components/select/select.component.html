@@ -1,12 +1,4 @@
-<!--<div class="select">-->
-<!--  <label class="select__label"> {{label}}</label>-->
-<!--  <mat-form-field>-->
-<!--    <mat-label>Select an option</mat-label>-->
-<!--    <mat-select [formControl]="myControl">-->
-<!--      <mat-option [value]="item.value" *ngFor="let item of options">{{item.title}}</mat-option>-->
-<!--    </mat-select>-->
-<!--  </mat-form-field>-->
-<!--</div>-->
+<label class="label">{{label}}</label>
 <div class="custom-select-container" [ngClass]="{'open': isOpen}" (click)="toggle()">
   <div class="selected-option">
     <p *ngIf="myControl.value" >{{ myControl.value }}</p>

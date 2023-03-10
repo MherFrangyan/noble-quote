@@ -1,10 +1,10 @@
 @import "src/app/shared/style/variables/colors";
 
+.block_image {
+  width: 130%;
+}
+
 .card-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
   @media (max-width: 992px) {
     flex-direction: column;
   }
@@ -12,66 +12,91 @@
 
 .card {
   flex: 1;
-  height: 443px;
-  position: relative;
+  height: 412px;
   max-width: 400px;
+  background: none;
   @media (max-width: 992px) {
     width: 100%;
     margin-bottom: 90px;
-    max-width: 500px;
+    max-width: 100%;
+  }
+  @media (max-width: 576px) {
+    margin-bottom: 50px;
   }
 
   &__main {
-    padding: 110px 35px 0;
+    padding: 110px 20px 0;
     background: #FFFFFF;
     box-shadow: 0 35px 44px rgba(92, 136, 178, 0.05);
     border-radius: 30px;
-    height: 413px;
+    max-width: 219px;
     box-sizing: border-box;
     @media (max-width: 992px) {
-      box-sizing: content-box;
-      height: 380px;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    @media (max-width: 576px) {
+      padding: 46px 18px 5px;
+      margin: 0;
     }
 
     &-icon {
-      position: absolute;
       top: -64px;
+      left: 12%;
+      @media (max-width: 576px) {
+        max-width: 58px;
+        top: -25px;
+        left: 5%;
+      }
     }
 
     &-title {
-      text-transform: capitalize;
       font-weight: 700;
-      font-size: 35px;
-      line-height: 44px;
+      font-size: 25px;
+      line-height: 32px;
       color: $dark-blue-100;
+      @media (max-width: 576px) {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 0;
+      }
     }
 
     &-price {
       margin: 20px 0;
 
       .price_title {
-        display: inline-block;
         font-weight: 400;
-        font-size: 20px;
-        line-height: 25px;
+        font-size: 18px;
+        line-height: 23px;
         color: $dark-blue-100;
         margin-bottom: 10px;
+        @media (max-width: 576px) {
+          font-size: 10px;
+          line-height: 13px;
+        }
       }
 
       .price_count {
         font-weight: 800;
-        font-size: 30px;
-        line-height: 38px;
+        font-size: 25px;
+        line-height: 32px;
         color: $dark-blue-300;
+        @media (max-width: 576px) {
+          font-weight: 800;
+          font-size: 19px;
+          line-height: 24px;
+        }
+      }
+      @media (max-width: 576px) {
+        margin: 5px 0;
       }
     }
   }
 
   &__sale {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
     left: 0;
     bottom: 0;
     background: $dark-blue-600;
@@ -79,23 +104,45 @@
     border-radius: 0 20px 20px 20px;
     max-width: 170px;
 
+    @media (max-width: 992px) {
+      right: 0;
+      left: initial;
+    }
+
+    @media (max-width: 576px) {
+      padding: 18px 12px;
+    }
+
     &-with {
       font-weight: 400;
-      font-size: 20px;
-      line-height: 25px;
+      font-size: 17px;
+      line-height: 22px;
       color: #FFFFFF;
+
+      @media (max-width: 576px) {
+        font-size: 11px;
+        line-height: 15px;
+      }
     }
 
     &-logo {
+      max-width: 131px;
       margin: 10px 0;
+      @media (max-width: 576px) {
+        max-width: 95px;
+      }
     }
 
     &-count {
       font-weight: 800;
-      font-size: 40px;
-      line-height: 51px;
+      font-size: 34px;
+      line-height: 44px;
       color: #FFFFFF;
-      text-shadow: 0px 4px 4px rgba(11, 78, 140, 0.28);
+      text-shadow: 0 4px 4px rgba(11, 78, 140, 0.28);
+      @media (max-width: 576px) {
+        font-size: 23px;
+        line-height: 29px;
+      }
     }
   }
 }

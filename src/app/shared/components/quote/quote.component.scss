@@ -1,0 +1,51 @@
+.quote {
+  max-width: 1240px;
+  border-radius: 30px;
+  padding: 120px 0 100px;
+  margin: 220px auto 0;
+  background: url("../../../../assets/images/quote_bg.webp") no-repeat;
+  background-size: cover;
+  @media (max-width: 576px) {
+    padding: 40px 35px;
+    margin: 120px auto 0;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+    text-align: center;
+    color: #FFFFFF;
+    max-width: 905px;
+    margin: auto;
+    &-color{
+      color: #83acd8;
+    }
+    @media (max-width: 576px) {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 110%;
+      text-align: center;
+      letter-spacing: 0.04em;
+    }
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 150%;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 20px;
+  }
+
+  &__btn {
+    margin: 50px auto;
+    @media (max-width: 576px) {
+      padding: 10px 20px;
+      font-size: 12px;
+      line-height: 15px;
+      margin: 20px auto 0;
+    }
+  }
+}

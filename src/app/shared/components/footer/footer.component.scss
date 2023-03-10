@@ -1,0 +1,112 @@
+@import "src/app/shared/style/variables/colors";
+
+.footer {
+  padding: 65px 82px;
+  width: 96%;
+  box-sizing: border-box;
+  margin: 130px auto 0;
+  text-align: center;
+  background: $light-blue-120;
+  border-radius: 30px;
+  @media (max-width: 567px) {
+    padding: 30px 59px;
+    margin: 50px auto 0;
+  }
+  &__list {
+    margin-top: 19px;
+    list-style: none;
+    @media (max-width: 567px) {
+     margin: 19px auto 19px;
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+    width: 34px;
+    height: 34px;
+    background: $dark-blue-5000;
+    border-radius: 30px;
+    color: white;
+    font-size: 10px;
+
+    transition: .5s;
+
+    &:hover{
+      color: black;
+    }
+  }
+  &__terms{
+    @media (max-width: 567px) {
+      flex-direction: column-reverse;
+      gap: 10px;
+    }
+  }
+  &__contact {
+
+    @media (max-width: 567px) {
+      justify-content: center;
+    }
+    &-list {
+      margin-bottom: 30px;
+      @media (max-width: 567px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+      }
+    }
+    &-list-item {
+      list-style: none;
+
+      p {
+        margin-bottom: 8px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: left;
+        color: $light-blue-700;
+        @media (max-width: 567px) {
+          text-align: center;
+          font-size: 12px;
+          margin-bottom: 2px;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: left;
+        color: $dark-blue-5000;
+        @media (max-width: 567px) {
+          text-align: center;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  &__right-block{
+    @media (max-width: 567px) {
+      width: 100%;
+      img{
+        max-width: 152px;
+        width: 100%;
+        margin: auto;
+      }
+    }
+  }
+  &__text {
+    margin-bottom: 12px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    color: $light-gray-700;
+    @media (max-width: 567px) {
+      text-align: center;
+      width: 100%;
+      font-size: 14px;
+    }
+  }
+}

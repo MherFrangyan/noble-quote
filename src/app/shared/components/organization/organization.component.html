@@ -1,0 +1,31 @@
+<div class="home">
+    <div class="home__organization position-relative">
+        <div class="home__organization-container">
+            <div class="home__organization-header d-flex justify-content-around align-items-center">
+                <div class="text-block text-lg-start text-center">
+                    <h6 class="title">NobleCare</h6>
+                    <p class="desc">Each week we highlight
+                        3 charitable groups and provide them support so they can continue to help those in need.</p>
+                </div>
+                <div class="header-image">
+                    <img src="assets/images/organization/woman-with-huge-debt%201.png" alt="">
+                </div>
+            </div>
+            <div class="home__organization-footer d-flex flex-wrap align-items-center w-100 m-auto">
+                <h5 class="title">Amazing Organizations We Believe In</h5>
+                <div class="home__organization-slide position-relative">
+                    <div class="home__organization-bg_fone position-absolute">
+                        <img alt="Bg" src="assets/images/shadow.png" class="w-100">
+                    </div>
+                    <ngx-slick-carousel class="home__organization-carousel text-center m-auto"
+                                        #slickModal="slick-carousel"
+                                        [config]="carouselOptions">
+                        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+                            <img src="assets/images/organization/{{ slide.img }}" alt="Logo" class="m-auto" width="100%">
+                        </div>
+                    </ngx-slick-carousel>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

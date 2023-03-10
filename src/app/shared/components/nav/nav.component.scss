@@ -1,9 +1,11 @@
 @import "src/app/shared/style/variables/colors";
-.nav{
+
+.nav {
   font-family: 'Maven Pro', sans-serif;
   padding: 16px 0;
   background: $dark-blue-5000;
-  &__container{
+
+  &__container {
     max-width: 1440px;
     padding: 0 80px;
     margin: auto;
@@ -15,7 +17,8 @@
       padding: 0 30px;
     }
   }
-  &__content{
+
+  &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,29 +27,61 @@
       justify-content: center;
     }
   }
-  &__list{
+
+  &__list {
     padding: 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 24px;
+    @media (max-width: 992px) {
+      gap: 0;
+      li{
+        list-style: none;
+      }
+    }
   }
+
+  .navbar-toggler {
+    padding: 10px 15px;
+    border: 0;
+    &:focus{
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  .toggler-icon {
+    border: 1px solid #FFFFFF;
+    display: block;
+    margin-bottom: 7px;
+    width: 24px;
+  }
+
+  &__logo {
+
+  }
+
   &__item {
+    list-style: initial;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     text-align: right;
     color: $light-blue-200;
+
     &-link {
       color: $light-blue-200;
       text-decoration: none;
     }
-    &-first{
+
+    &-first {
       list-style: none;
     }
   }
-  &__contact{
+
+  &__contact {
     &-title {
       font-weight: 400;
       font-size: 14px;
@@ -55,6 +90,7 @@
       color: $light-blue-200;
       margin-right: 15px;
     }
+
     &-phone {
       font-weight: 700;
       font-size: 18px;

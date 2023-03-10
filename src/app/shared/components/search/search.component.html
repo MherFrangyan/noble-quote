@@ -1,0 +1,22 @@
+<div class="home">
+    <div class="home__header_content d-lg-flex justify-content-between align-items-center flex-wrap">
+        <div
+                routerLink="/"
+                class="home__logo d-lg-block d-none">
+            <img src="assets/images/logo.svg" alt="Logo">
+        </div>
+        <div class="home__right d-flex align-items-center justify-content-end">
+            <div class="home__search d-flex justify-content-between align-items-center">
+                <input class="home__search_input"
+                       placeholder="Search"
+                       [(ngModel)]="search"
+                       (change)="changeValue()"
+                       type="text">
+                <img src="assets/images/icon/search_icon.svg" alt="Icon">
+            </div>
+            <span class="home__right-user">
+            <img src="assets/images/icon/user_circle.svg" alt="User">
+          </span>
+        </div>
+    </div>
+</div>

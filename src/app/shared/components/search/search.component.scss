@@ -1,0 +1,45 @@
+@import "src/app/shared/style/variables/colors";
+
+.home {
+  &__header_content {
+    padding-top: 22px;
+  }
+
+  &__search {
+    flex: 1;
+    padding: 0 22px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(22px);
+    border-radius: 30px;
+  }
+
+  &__search_input {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: $blue-grey-100;
+    padding: 14px 0;
+    border: none;
+    width: 318px;
+    background: transparent;
+
+    @media (max-width: 480px) {
+      width: auto;
+    }
+
+    &::placeholder {
+      color: $blue-grey-100;
+    }
+
+    &:focus {
+      box-shadow: none;
+      border: none;
+      outline: none;
+    }
+  }
+
+  &__logo {
+    cursor: pointer;
+  }
+}
+
